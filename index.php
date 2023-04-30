@@ -53,15 +53,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $messages['name'] = '<div class="error-msg">Допустимы только буквы А-Я, A-Z.</div>';
   }
 
-  if ($errors['email']) {
-    setcookie('email_error', '', 100000);
-    $messages['email'] = '<div class="error-msg">Введите верный email!</div>';
-  }
   if ($errors['email'] == 1) {
     setcookie('email_error', '', 100000);
     $messages['email'] = '<div class="error-msg">Введите верный email!</div>';
-  } else if ($errors['name'] == 2) {
-    setcookie('name_error', '', 100000);
+  } else if ($errors['email'] == 2) {
+    setcookie('email_error', '', 100000);
     $messages['email'] = '<div class="error-msg">Введите email верного формата!</div> <div class="error-msg">Пример: test@example.com</div>';
   }
 
