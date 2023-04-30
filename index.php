@@ -133,7 +133,7 @@ else {
     setcookie('email_error', '1', time() + 24 * 60 * 60);
     $errors = TRUE;
   } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    setcookie('name_error', '2', time() + 24 * 60 * 60);
+    setcookie('email_error', '2', time() + 24 * 60 * 60);
     $errors = TRUE;
   } else {
     setcookie('email_value', $_POST['email'], time() + 30 * 24 * 60 * 60);
