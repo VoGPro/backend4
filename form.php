@@ -70,7 +70,7 @@
             <?php if (!empty($messages['limbs'])) {print($messages['limbs']);}?><br /><br />
             <label>
                 Сверхспособности:<br />
-                <select name="superpowers[]" multiple="multiple" class="form-control<?php if ($errors['birth_date']) {print ' error';} ?>">
+                <select name="superpowers[]" multiple="multiple" class="form-control<?php if ($errors['superpowers']) {print ' error';} ?>">
                     <option <?php print $values['immortality']; ?> value="immortality">бессмертие</option>
                     <option <?php print $values['levitation']; ?> value="levitation">левитация</option>
                     <option <?php print $values['wall_passing']; ?> value="wall_passing">прохождение сквозь стены</option>
