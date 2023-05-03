@@ -162,15 +162,14 @@ else {
     setcookie('limbs_value', $_POST['limbs'], time() + 30 * 24 * 60 * 60);
   }
 
+  setcookie('immortality_value', '', 100000);
+  setcookie('levitation_value', '', 100000);
+  setcookie('wall_passing_value', '', 100000);
+  setcookie('telekinesis_value', '', 100000);
   if (empty($_POST['superpowers'])) {
     setcookie('superpowers_error', '1', time() + 24 * 60 * 60);
     $errors = TRUE;
   } else {
-    setcookie('immortality_value', '', 100000);
-    setcookie('levitation_value', '', 100000);
-    setcookie('wall_passing_value', '', 100000);
-    setcookie('telekinesis_value', '', 100000);
-    
     foreach ($superpowers as $item) {
       switch ($item) {
         case 'immortality':
