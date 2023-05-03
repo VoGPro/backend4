@@ -215,7 +215,7 @@ else {
   }
 
   // Сохранение в БД.
-  $conn = new mysqli('localhost', 'u52985', '8415427', 'u52985');
+  $conn = new mysqli('localhost','root','','test');
   if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);
   } else {
