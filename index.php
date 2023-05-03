@@ -122,6 +122,7 @@ else {
     setcookie('name_error', '1', time() + 24 * 60 * 60);
     $errors = TRUE;
   } else if (preg_match("/[^a-zA-Zа-яёА-ЯЁ ]/u", $_POST['name'])) {
+    setcookie('name_value', $_POST['name'], time() + 30 * 24 * 60 * 60);
     setcookie('name_error', '2', time() + 24 * 60 * 60);
     $errors = TRUE;
   } else {
@@ -133,6 +134,7 @@ else {
     setcookie('email_error', '1', time() + 24 * 60 * 60);
     $errors = TRUE;
   } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    setcookie('email_value', $_POST['email'], time() + 30 * 24 * 60 * 60);
     setcookie('email_error', '2', time() + 24 * 60 * 60);
     $errors = TRUE;
   } else {
