@@ -164,6 +164,11 @@ else {
     setcookie('superpowers_error', '1', time() + 24 * 60 * 60);
     $errors = TRUE;
   } else {
+    setcookie('immortality_value', '', 100000);
+    setcookie('levitation_value', '', 100000);
+    setcookie('wall_passing_value', '', 100000);
+    setcookie('telekinesis_value', '', 100000);
+    
     foreach ($superpowers as $item) {
       switch ($item) {
         case 'immortality':
@@ -209,7 +214,7 @@ else {
   }
 
   // Сохранение в БД.
-  $conn = new mysqli('localhost', 'root', '', 'test');
+  $conn = new mysqli('localhost', 'u52985', '8415427', 'u52985');
   if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);
   } else {
